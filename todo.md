@@ -665,9 +665,17 @@ Elasticache通过在内存中缓存数据来减少对象读取数据库的次数
 
   
 
-  
-  
   ​         
+  
+  
+  
+  # CI/CD
+  
+  ![image-20200618191431293](todo.assets/image-20200618191431293.png)
+  
+  
+  
+  
   
   ## S3 FAQ
   
@@ -1070,6 +1078,16 @@ Q22  attach an existing ec2 instance to  auto scaling group
 
 \- If the Auto Scaling group has an attached load balancer, the instance and the load balancer must both be in EC2-Classic or the same VPC. If the Auto Scaling group has an attached target group, the instance and the load balancer must both be in the same VPC.
 
+Q33
+
+**Storage Optimized Instances** is the correct answer. Storage optimized instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage. They are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
+
+**Memory Optimized Instances** is incorrect because these are designed to deliver fast performance for workloads that process large data sets in memory, which is quite different from handling high read and write capacity on local storage.
+
+**Compute Optimized Instances** is incorrect because these are ideal for compute-bound applications that benefit from high-performance processors, such as batch processing workloads and media transcoding.
+
+**General Purpose Instances** is incorrect because these are the most basic type of instances. They provide a balance of compute, memory, and networking resources, and can be used for a variety of workloads. Since you are requiring higher read and write capacity, storage optimized instances should be selected instead
+
 
 
 Q36
@@ -1107,4 +1125,67 @@ most AWS services use VPC *Interface* Endpoint except for S3 and DynamoDB, which
 Q51
 
 you can only change the storage class of your objects from S3 Standard storage class to STANDARD_IA or ONEZONE_IA storage **after 30 day**s. This limitation does not apply on INTELLIGENT_TIERING, GLACIER, and DEEP_ARCHIVE storage class.
+
+
+
+# Mock Test 6
+
+Q16
+
+**我已终止我所有的 Amazon Elastic Compute Cloud (Amazon EC2) 实例，但仍然需要为弹性 IP 地址付费。[Amazon EC2 定价页面](https://aws.amazon.com/ec2/pricing/on-demand)显示弹性 IP 地址是免费的。为何要向我收取费用？
+*
+
+只要满足以下所有条件，弹性 IP 地址便不会产生费用：
+
+- 弹性 IP 地址与 EC2 实例关联。
+- 与弹性 IP 地址关联的实例正在运行。
+- 该实例只附加有一个弹性 IP 地址。
+
+
+
+Q18 
+
+- cloudfront+s3 (enable s3 version is as best practise )
+
+
+
+Q25
+
+- Code commit and commit build is not for deployment
+
+Q40
+
+- In EC2-Classic, your EC2 instance receives a private IPv4 address from the EC2-Classic range each time it's started. In EC2-VPC on the other hand, your EC2 instance receives a static private IPv4 address from the address range of your default VPC.
+
+Q45
+
+-Egress Only Internet Gateway
+
+- Egress only Internet Gateway is for IPv6 only
+- Similar function as a NAT, but a NAT is for IPv4
+- Good to know: IPv6 are all public addresses
+- Therefore all our instances with IPv6 are publicly accessibly
+- Egress Only Internet Gateway gives our IPv6 instances access to the internet, but they won’t be directly reachable by the internet
+- After creating an Egress Only Internet Gateway, edit the route tables
+
+
+
+Q46
+
+ IAM User has aws managment  console access or programatic access for different purpose  
+
+![image-20200618211701787](todo.assets/image-20200618211701787.png)
+
+Q47
+
+![image-20200618212046461](todo.assets/image-20200618212046461.png)
+
+
+
+Q 60
+
+- **Detaching the EBS volume and attaching it to an EC2 instance residing in another Availability Zone** is incorrect because an EBS volume is only available in the Availability Zone it was created in and cannot be attached directly to other Availability Zones.
+- to move attach EBS volume from one AZ to another AZ need the first step is to create a snapshot of the EBS volume. Create a volume using this snapshot and then specify the new Availability Zone accordingly. 
+
+
 
