@@ -620,6 +620,8 @@ AWS提供了3种不同类型的Snowball。
 
 因此，我们可以将应用程序的数据库读取功能转移到Read Replicas上，来减轻源数据库的负载。
 
+RDS Read Replicas maximum 5, within AZ, cross AZ or Cross Region ( RDS read read replicas cross AZ or Cross Regions costs money), to reduce the cost , you can have your Read Replicas in same AZ
+
 ## Aurora
 
 - Aurora会将你的数据**复制2份**到每一个可用区内，并且**复制到最少3个可用区**，因此你会有**6份数据库备份**
@@ -665,20 +667,124 @@ Elasticache通过在内存中缓存数据来减少对象读取数据库的次数
 
   
 
+  
+
+  # AWS WAF – Web Application Firewall
+
+  AWS WAF – Web Application Firewall
+
+  • Protects your web applications from common web exploits (Layer 7) • Layer 7 is HTTP (vs Layer 4 is TCP)
+   • Deploy on Application Load Balancer, API Gateway, CloudFront
+
+  • Define Web ACL (Web Access Control List):
+   • Rules can include: IP addresses, HTTP headers, HTTP body, or URI strings
+
+  • Protects from common attack - SQL injection and Cross-Site Scripting (XSS) • Size constraints, geo-match (block countries)
+   • Rate-based rules (to count occurrences of events) – for DDoS protection
+
   ​         
+
   
-  
-  
+
   # CI/CD
-  
+
   ![image-20200618191431293](todo.assets/image-20200618191431293.png)
+
   
+
   
+
   
+
   
+
+  # 跨账号访问权限（Cross Account Access）
+
   
+
+  有了**跨账号访问权限（Cross Account Access）**，你可以在AWS管理控制台上或者使用AWS API/CL轻松地进行账号（角色）的切换，让你在不同的开发账号（角色）、测试账号（角色）、生产账号（角色）中进行快捷的切换。
+
+  用户请求切换角色流程
+
+  1. 可以在AWS控制台使用Switch Role的按钮切换到生产账号
+  2. 或者使用AWS API/CLI，使用AssumeRole函数获取UpdateAPP角色的凭证
+
+  - 管理员需要在IAM中创建一个新的角色UpdateAPP 角色的策略具体定义了允许访问名为productionapp的S3存储桶
+
+  - 在开发账户中，管理员向开发人员组的成员授权切换角色的权限。向开发人员组授予针对UpdateApp角色调用**AWS Security Token Service (AWS STS) AssumeRole API** 的权限
+
+  - 开发人员组的成员用户请求切换角
+
+    > 可以在AWS控制台使用Switch Role的按钮切换到生产账号
+    >
+    > 或者使用AWS API/CLI，使用AssumeRole函数获取UpdateAPP角色的凭证
+
+    
+
+  -  AWS STS返回临时凭证
+
+  - 临时凭证允许访问AWS资源，这样切换后的角色就可以访问productionapp的存储桶里的内容了。
+
+  
+
+  
+
+  # Security Token Service
+
+  使用**AWS Security Token Service (STS)**服务，你可以创建和控制对你的AWS资源访问的安全凭证。
+
+  这种临时的凭证的工作方式和长期存在于AWS账户中的IAM用户的工作方式类似，但会存在以下的区别：
+
+  - STS服务产生的凭证是**临时的**，它的有效期可以是几分钟到几小时，一旦过了这个时效时间，你的凭证就会失去作用，无法再访问相应的资源
+
+  - IAM会长期保存在AWS账户中，而临时凭证只有在需要的时候才**动态生成**
+
+    
+
+  STS的临时凭证可以由以下几种方式产生：
+
+  - 企业联合身份验证（Federation）
+
+    - 使用了基于**Security Assertion Markup Language (SAML)** 的标准
+    - 可以使用**微软Active Directory**的用户来获取临时权限，不需要创建IAM用户
+    - 支持**单点登录（Single Sign On, SSO）**
+
+  - Web联合身份验证（Federation with Mobile Apps）
+
+    - 使用已知的第三方身份供应商（Amazon, Facebook, Google或其他OpenID提供商）来登录
+
+  - 跨账户访问
+
+    - 让一个账号内的用户访问同一个组织（Organization）内其他账号的AWS资源
+
+    
+
+  ![image-20200619131729593](todo.assets/image-20200619131729593.png)
+
+  ## 知识点
+
+  以上的步骤看起来感觉非常复杂，但在AWS助理解决方案架构师的考试中，我们不需要完全熟悉以上的所有步骤，只需要记住以下这些要点即可。
+
+  - LDAP和AWS STS之间的通信需要通过Identity Broker (IdP)，而IdP一般需要自己开发
+  - IdP总是先跟LDAP认证，审核用户名密码，然后再和STS通信
+  - 应用程序最后会使用临时访问权限访问AWS的资源
+
+  另外，STS和微软AD域集成的时候，可以做到用户使用自己企业LDAP目录的AD账号密码来登录AWS管理控制台。其中的Identity Broker位置变成了ADFS (Active Directory Federation Services)。
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  已完成
+
   ## S3 FAQ
-  
+
   一定要熟读S3的常见问题，https://aws.amazon.com/cn/s3/faqs/
 
 下面是我自己从白皮书和国外论坛上总结的一百条知识点，考前看看用来帮助自己复习。
@@ -1014,7 +1120,7 @@ SAA-C02 140 Questions
 
 2, 4,8,9,11,25,28,31, 47,51, 52,53,54,56,58
 
-71,81,84,88,92,93,97,102,108,125,137,140
+71,81,83,84,92,93,97,102,108,125,137,140
 
 
 
