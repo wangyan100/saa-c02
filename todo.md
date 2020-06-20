@@ -1122,11 +1122,77 @@ SAA-C02 140 Questions
 
 71,81,83,84,92,93,97,102,108,125,137,140
 
+# Jon Bonso' Mock Test1
+
+Q38
+
+migrate on-premise network public IP to your AWS account
+
+Create a Route Origin Authorization(ROA) then once done, provison and advertise those public IP address range to your AWS Account 
+
+Q40
+
+Identity Broker (IdP) (Federation Proxy or IdentityProvider or  Active Directory Federation Services-for MSAD )
+
+Q47
+
+Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache that can reduce Amazon DynamoDB response times from milliseconds to microseconds, even at millions of requests per second.
+
+Q49
+
+a non-Serverless DB cluster for Aurora is called a provisioned DB cluster
+
+Q54
+
+When you use Amazon Redshift Enhanced VPC Routing, Amazon Redshift forces all COPY and UNLOAD traffic between your cluster and your data repositories through your Amazon VPC.
+
+Q61
 
 
 
 
-# Jon Bonso' MockTest 4
+
+# Jon Bonso' Mock Test4
+
+Q9
+
+AWS Global Accelerator
+
+**The traffic should be routed to the closest edge location via an Anycast static IP address.**
+
+***Amazon CloudFront\*** is incorrect because although this service uses edge locations, it doesn't have the capability to route the traffic to the closest edge location via an Anycast static IP address.
+
+
+
+Q19
+
+**You are instructed to implement a disaster recovery plan for the Redshift to ensure business continuity even in the event of an AWS region outage.**  
+
+Enable Cross-Region Snapshots Copy in your Amzazon Reshfit Cluster
+
+
+
+Q41
+
+When you launch an EC2 instance into a default VPC, AWS provides it with public and private DNS hostnames that correspond to the public IPv4 and private IPv4 addresses for the instance.
+
+However, when you launch an instance into a non-default VPC, AWS provides the instance with a private DNS hostname only. New instances will only be provided with public DNS hostname depending on these two DNS attributes: the **DNS resolution** and **DNS hostnames**, that you have specified for your VPC, and if your instance has a public IPv4 address.
+
+
+
+Q53
+
+If you got your certificate from a third-party CA, import the certificate into ACM or upload it to the IAM certificate store. Hence, **AWS Certificate Manager** and **IAM certificate store** are the correct answers.
+
+
+
+Q61 
+
+You can use [AWS X-Ray](https://docs.aws.amazon.com/xray/latest/devguide/xray-services-apigateway.html) to trace and analyze user requests as they travel through your Amazon API Gateway APIs to the underlying services. API Gateway supports AWS X-Ray tracing for all API Gateway endpoint types: regional, edge-optimized, and private. You can use AWS X-Ray with Amazon API Gateway in all regions where X-Ray is available.
+
+
+
+# Jon Bonso' MockTest 5
 
 Question 4
 
