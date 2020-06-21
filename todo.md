@@ -1156,6 +1156,50 @@ Amazon API Gateway** provides throttling at multiple levels including global and
 
 
 
+# Jon Bonso' Mock Test2
+
+Q8 **An accounting application uses an RDS database configured with Multi-AZ deployments to improve availability. What would happen to RDS if the primary database instance fails?**
+
+The canonical name record(CNAME) is switche from primary to standby instance.
+
+***The IP address of the primary DB instance is switched to the standby DB instance\*** is incorrect since IP addresses are per subnet, and subnets cannot span multiple AZs.
+
+
+
+Q47
+
+Take note that you should use SNS instead of SES (Simple Email Service) when you want to monitor your EC2 instances.
+
+
+
+Q51
+
+As a Junior Software Engineer, you are developing a hotel reservations application and are given the task of improving the database aspect of the app. You found out that RDS does not satisfy the needs of your application because it does not scale as easily compared with DynamoDB. You need to demonstrate to your Senior Software Engineer the advantages of using DynamoDB over RDS.  
+
+What are the valid use cases for Amazon DynamoDB? (Select TWO.)
+
+**DynamoDB** is a NoSQL database that supports key-value and document data structures. A key-value store is a database service that provides support for storing, querying, and updating collections of objects that are identified using a key and values that contain the actual content being stored. Meanwhile, a document data store provides support for storing, querying, and updating items in a document format such as JSON, XML, and HTML.
+
+**Managing web sessions** is correct because the DynamoDB Time-to-Live (TTL) mechanism enables you to manage web sessions of your application easily. It lets you set a specific timestamp to delete expired items from your tables. Once the timestamp expires, the corresponding item is marked as expired and is subsequently deleted from the table. By using this functionality, you do not have to track expired data and delete it manually. TTL can help you reduce storage usage and reduce the cost of storing data that is no longer relevant.
+
+**Storing metadata for Amazon S3 objects** is correct because the Amazon DynamoDB stores structured data indexed by primary key and allow low latency read and write access to items ranging from 1 byte up to 400KB. Amazon S3 stores unstructured blobs and is suited for storing large objects up to 5 TB. In order to optimize your costs across AWS services, large objects or infrequently accessed data sets should be stored in Amazon S3, while smaller data elements or file pointers (possibly to Amazon S3 objects) are best saved in Amazon DynamoDB.
+
+
+
+Q 65
+
+**Throughput optimized HDD(std1)**, Low cost Big data , fast , intensive  throughput , freqeuent access 
+
+
+
+**Cold HDD(sc1)** ,  Lowest cost, Throughput-oriented storage for large volumes of for data infrequently accessed workloads 
+
+
+
+
+
+
+
 
 
 # Jon Bonso' Mock Test4
