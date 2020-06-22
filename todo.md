@@ -1228,6 +1228,12 @@ dynamoDB autoscalinggroup is not default enabled
 
 dynamoDB can enable global replication.
 
+Q36
+
+**What service must be used to easily capture, transform, and load streaming data into Amazon S3, Amazon Elasticsearch Service, and Splunk?**
+
+Kinesis Data Firehose can 
+
 
 
 Q40
