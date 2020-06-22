@@ -1200,6 +1200,40 @@ Q 65
 
 
 
+# Jon Bonso's Mock Test3
+
+Q2
+
+**Stopping the Reserved instances as soon as possible** is incorrect because a stopped instance can still be restarted. Take note that when a Reserved Instance expires, any instances that were covered by the Reserved Instance are billed at the on-demand price which costs significantly higher.
+
+Q3
+
+Hence, the correct answer is to **use the built-in Reader endpoint of the Amazon Aurora database.**
+
+The option that says: **Use the built-in Cluster endpoint of the Amazon Aurora database** is incorrect because a cluster endpoint (also known as a writer endpoint) simply connects to the current primary DB instance for that DB cluster. This endpoint can perform write operations in the database such as DDL statements, which is perfect for handling production traffic but not suitable for handling queries for reporting since there will be no write database operations that will be sent.
+
+The option that says: **Enable Amazon Aurora Parallel Query** is incorre
+
+Q4
+
+**RDS** is incorrect because this is just a "managed" service and not "fully managed". This means that you still have to handle the backups and other administrative tasks such as when the automated OS patching will take place.
+
+**DynamoDB** is the best option to use in this scenario. It is a fully managed non-relational database service – you simply create a database table, set your target utilization for Auto Scaling, and let the service handle the rest. You no longer need to worry about database management tasks such as hardware or software provisioning, setup and configuration, software patching, operating a reliable, distributed database cluster, or partitioning data over multiple instances as you scale. DynamoDB also lets you backup and restore all your tables for data archival, helping you meet your corporate and governmental regulatory requirements.
+
+Q40
+
+AutoScalingGroup and ELB could not cross/span Regions 
+
+Q62
+
+The following VPC peering connection configurations are not supported.
+
+Overlapping CIDR Blocks
+
+Transitive Peering
+
+Edge to Edge Routing Through a Gateway or Private Connection
+
 
 
 # Jon Bonso' Mock Test4
