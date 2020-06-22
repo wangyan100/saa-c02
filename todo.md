@@ -1220,6 +1220,16 @@ Q4
 
 **DynamoDB** is the best option to use in this scenario. It is a fully managed non-relational database service – you simply create a database table, set your target utilization for Auto Scaling, and let the service handle the rest. You no longer need to worry about database management tasks such as hardware or software provisioning, setup and configuration, software patching, operating a reliable, distributed database cluster, or partitioning data over multiple instances as you scale. DynamoDB also lets you backup and restore all your tables for data archival, helping you meet your corporate and governmental regulatory requirements.
 
+
+
+Q20
+
+dynamoDB autoscalinggroup is not default enabled
+
+dynamoDB can enable global replication.
+
+
+
 Q40
 
 AutoScalingGroup and ELB could not cross/span Regions 
