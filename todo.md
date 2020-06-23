@@ -1478,6 +1478,14 @@ Q47
 
 
 
+Q52
+
+- For decoupled applications, it is best to use SWF and SQS which are both available in all options. Note that this question asks you for the option that you would **LEAST** likely to recommend.
+
+
+
+
+
 Q 60
 
 - **Detaching the EBS volume and attaching it to an EC2 instance residing in another Availability Zone** is incorrect because an EBS volume is only available in the Availability Zone it was created in and cannot be attached directly to other Availability Zones.
