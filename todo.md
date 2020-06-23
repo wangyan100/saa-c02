@@ -1433,6 +1433,22 @@ Q25
 
 - Code commit and commit build is not for deployment
 
+
+
+Q28
+
+- AWS Organizations offers policy-based management for multiple AWS accounts. With Organizations, you can create groups of accounts, automate account creation, **apply and manage policies for those groups**. Organizations enables you to centrally manage policies across multiple accounts, without requiring custom scripts and manual processes. It allows you to create **Service Control Policies (SCPs)** that centrally control AWS service use across multiple AWS accounts.
+
+Q 32
+
+- **Storage Optimized Instances** for workloads that require high, sequential read and write access to very large data sets on local storage. They are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
+
+  **Memory Optimized Instances**  designed to deliver fast performance for workloads that process large data sets in memory, which is quite different from handling high read and write capacity on local storage.
+
+  **Compute Optimized Instances** for compute-bound applications that benefit from high-performance processors, such as batch processing workloads and media transcoding.
+
+  **General Purpose Instances** They provide a balance of compute, memory, and networking resources, and can be used for a variety of workloads. Since you are requiring higher read and write capacity, storage optimized instances should be selected instead.
+
 Q40
 
 - In EC2-Classic, your EC2 instance receives a private IPv4 address from the EC2-Classic range each time it's started. In EC2-VPC on the other hand, your EC2 instance receives a static private IPv4 address from the address range of your default VPC.
