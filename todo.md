@@ -1390,9 +1390,9 @@ AWS Glue is a fully managed extract, transform, and load (ETL) service that make
 
 Q47
 
-VPC Endpoint(services) private link 
+For this scenario, the best answer is: **AWS Directory Services, VPN connection, and Amazon Workspaces**.
 
-most AWS services use VPC *Interface* Endpoint except for S3 and DynamoDB, which use VPC *Gateway* Endpoint.
+First, you need a VPN connection to connect the VPC and your on-premises network. Second, you need AWS Directory Services to integrate with your on-premises Active Directory and lastly, you need to use Amazon Workspace to create the needed virtual desktops in your VPC.
 
 Q51
 
