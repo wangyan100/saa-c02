@@ -1124,6 +1124,10 @@ SAA-C02 140 Questions
 
 # Jon Bonso' Mock Test1
 
+Q28
+
+- You can use CloudWatch Events to run Amazon ECS tasks when certain AWS events occur. 
+
 Q38
 
 migrate on-premise network public IP to your AWS account
