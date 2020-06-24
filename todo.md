@@ -1109,6 +1109,10 @@ Elasticache通过在内存中缓存数据来减少对象读取数据库的次数
 130. An Auto Scaling group can contain EC2 instances in one or more Availability Zones within the same Region. However, Auto Scaling groups cannot span multiple Regions. For Auto Scaling groups in a VPC, the EC2 instances are launched in subnets.
 
      VPC could not span multi regions, peering vpc also could not span multi regions
+     
+131. **dependency on multicast networking.** 
+
+     **Creating a virtual overlay network running on the OS level of the instance** is correct because overlay multicast is a method of building IP level multicast across a network fabric supporting unicast IP routing, such as Amazon Virtual Private Cloud (Amazon VPC).
 
 
 
