@@ -1370,6 +1370,8 @@ Q36
 
 EBS HDD could not be boot volume , SSD could be used as boot volume
 
+SSD for  small random IO/Operation, HDD for large sequential IO/Operation
+
 Q37 
 
 Outputs is an optional section of the cloudformation template that describes the values that are returned whenever you view your stack's properties.
