@@ -129,7 +129,7 @@ EKS on EC2 and EKS on Fargate
 
 ![image-20200608153833960](todo.assets/image-20200608153833960.png)
 
-![Screenshot 2020-06-08 at 14.08.58](todo.assets/Screenshot 2020-06-08 at 14.08.58.png)
+![Screenshot 2020-06-08 at 14.08.58](todo.assets/Screenshot%202020-06-08%20at%2014.08.58.png)
 
 Task is like a running docker container or Pod, Task defination is like docker file which defines CPU, Memory , port, resource used .
 
@@ -137,7 +137,7 @@ Task is like a running docker container or Pod, Task defination is like docker f
 
 ![image-20200608160919756](todo.assets/image-20200608160919756.png)
 
-![Screenshot 2020-06-08 at 16.07.28](todo.assets/Screenshot 2020-06-08 at 16.07.28.png)
+![Screenshot 2020-06-08 at 16.07.28](todo.assets/Screenshot%202020-06-08%20at%2016.07.28.png)
 
 #  SIMPLE STORAGE SERVICE (S3), GLACIER, CLOUDFRONT – 存储服务
 
@@ -1122,7 +1122,7 @@ SAA-C02 140 Questions
 
 
 
-2, 4,8,9,11,25,28,31, 47,51, 52,53,54,56,58
+2, 4,8,9,11,25,28,29,31, 47,51, 52,53,54,56,58,59
 
 71,81,83,84,92,93,97,102,108,125,137,140
 
